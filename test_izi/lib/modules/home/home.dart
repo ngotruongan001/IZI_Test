@@ -43,6 +43,7 @@ class _HomePageState extends State<HomePage> {
                   widgetTitleHot(),
                   widgetListPromo(),
                   widgetListTopHot(),
+                  widgetButtonShow(),
                 ],
               ),
             ),
@@ -338,7 +339,6 @@ class _HomePageState extends State<HomePage> {
                             Text("Shushi hai nam ...", overflow: TextOverflow.ellipsis,),
                             SizedBox(height: 5),
                             Text("4.3 (20+)",),
-
                           ]
                       )
                   )
@@ -599,4 +599,23 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
+  Widget widgetButtonShow(){
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 10.h),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.red,
+        ),
+        child: Row(
+          children: [
+
+            Text('Đơn hàng #1001 - Bánh mì Tây Hải đang thực hiện...',),
+            Icon(Icons.arrow_forward_ios_rounded, color: Colors.white,)
+          ],
+        ),
+      ),
+    );
+  }
+
 }
